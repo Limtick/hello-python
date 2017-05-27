@@ -10,7 +10,7 @@ drag_line((1,2,3))
 drag_line({'1':1})
 drag_line([1,2,3,4])
 
-print(my_abs(234))
+print(my_abs(23))
 print(my_abs(-2))
 # print(my_abs('en'))
 
