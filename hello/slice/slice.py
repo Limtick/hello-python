@@ -51,7 +51,10 @@ drag_line('迭代')
 list = list(range(10))
 for key in list:
     print(key)
-drag_line('')
+
+array = [1, 2, 5, 3, 6, 8, 4]
+print(sorted(array))
+drag_line('---')
 r'''
 dict的存储不是按照list的方式顺序排列，所以，迭代出的结果顺序很可能不一样
 '''
