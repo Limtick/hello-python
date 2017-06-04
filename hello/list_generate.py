@@ -84,3 +84,27 @@ example = fib_generator(6)
 print(example)  # generator
 for x in example:
     print(x)
+drag_line(
+'''
+for循环调用generator时，拿不到generator的return语句的返回值
+必须捕获StopIteration错误，返回值包含在StopIteration的value中
+''')
+g = fib_generator(6)
+while True:
+    try:
+        n = next(g)
+        print(n)
+    except StopIteration as e:
+        print(e.value)
+        break
+
+def triangles(num):
+    a = [1]
+    while True:
+        yield a
+        a = [sum(i) for i in zip([0] + a, a + [0])]
+        if len(a) > num:
+            break
+t = triangles(10)
+for i in t:
+    print(i)
