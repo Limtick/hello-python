@@ -11,6 +11,7 @@ sina.html
 *.egg
 *.egg-info
 dist
+.vscode/
 build
 eggs
 parts
